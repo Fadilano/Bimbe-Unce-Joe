@@ -12,7 +12,6 @@
             <input id="password"type="password" placeholder="Kata sandi" class="bg-[#DFEBFB] rounded-3xl w-72 h-12 p-5">
             <div></div>
             <button class="bg-[#29A06A] rounded-3xl w-72 h-12 text-white">Masuk</button>
-    
         </div>
     
 </body>
