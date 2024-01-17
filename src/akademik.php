@@ -1,3 +1,8 @@
+<?php
+    require 'connection.php';
+    session_start();
+
+?>
 <!doctype html>
 <html>
 <head>
@@ -34,13 +39,20 @@
                 </tr>
             </thead>
             <tbody class="">
+                <?php
+                $no = 1;
+                $querySiswa= mysqli_query($con,"SELECT * FROM tbl_laporan");
+                while ($data= mysqli_fetch_array($querySiswa)){?>
+                
+                
                 <!-- ISI DATA -->
                 <tr>
-                    <td class="p-2 ">Fadil</td>
-                    <td class="p-2 ">Fadil</td>
-                    <td class="p-2 ">Fadil</td>
-                    <td class="p-2 ">Fadil</td>
+                    <td class="p-2 "><?= $data['tanggal'] ?> </td>
+                    <td class="p-2 "><?= $data['matpel'] ?></td>
+                    <td class="p-2 "><?= $data['materi'] ?></td>
+                    <td class="p-2 "><?= $data['penilaian'] ?></td>
                 </tr>
+                <?php } ?>
             </tbody>
         </table>
     </main>
