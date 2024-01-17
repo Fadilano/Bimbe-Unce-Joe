@@ -1,8 +1,4 @@
-<?php
-    require 'connection.php';
-    session_start();
 
-?>
 <!doctype html>
 <html>
 <head>
@@ -29,6 +25,7 @@
     </header>
     <main class="p-16 w-[841px]">
         <h1 class="mb-4 text-5xl font-bold text-[#150D5C]">Laporan Pembelajaran Siswa</h1>
+        <a href="admin_formEdit.php" class="font-semibold p-2 bg-green-500 text-white rounded-lg" >Tambah Data</a>
         <table class="table-auto bg-white text-xl w-[840px] rounded-2xl  ">
             <thead>
                 <tr class="border border-b-violet-300" >

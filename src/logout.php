@@ -10,7 +10,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link href="./output.css" rel="stylesheet">
+  <link href="output.css" rel="stylesheet">
 </head>
 <body class="bg-[#5651AB] h-screen flex justify-center items-center">
   

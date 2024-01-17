@@ -25,31 +25,20 @@
         </div>
     </header>
     <main class="p-16 w-[841px]">
-        <h1 class="mb-4 text-5xl font-bold text-[#150D5C]">Data Siswa</h1>
-        <a href="admin_formtTambah.php" class="font-semibold p-2 bg-green-500 text-white rounded-lg" >Tambah Data</a>
-        <table class="table-auto mt-6 bg-white text-xl w-[840px] rounded-2xl  ">
-            <thead>
-                <tr class="border border-b-violet-300" >
-                    <th class="p-2 text-left">Nama</th>
-                    <th class="p-2 text-left">Kelas</th>
-                    <th class="p-2 text-left">Asal Sekolah</th>
-                    <th class="p-2 text-left">Alamat</th>
-                    <th class="p-2 text-left">No. Telepon</th>
-                </tr>
-            </thead>
-            <tbody class="">
-                <!-- ISI DATA -->
-                <tr>
-                    <td class="p-2 ">Fadilano Abraham</td>
-                    <td class="p-2 ">5 SD</td>
-                    <td class="p-2 ">SDN Tadika Mesra</td>
-                    <td class="p-2 ">Bekasi</td>
-                    <td class="p-2 ">081029312</td>
-                    <td><a href="admin_DataPenilaian.php" class="p-1 border border-black ">Laporan Penilaian</a></td>
-                    
-                </tr>
-            </tbody>
-        </table>
+        <h1 class="mb-4 text-5xl font-bold text-[#150D5C]">Tambah Penilaian</h1>
+        <!-- nama kelas sekolah alamat telepon -->
+        <form action="" class=" text-[#150D5C] flex flex-col gap-3">
+            <label for="nama">Tanggal : </label>
+            <input class="p-2 rounded-xl" id="nama" type="text">
+            <label for="kelas">Mata Pelajaran : </label>
+            <input class="p-2 rounded-xl" id="kelas" type="text" >
+            <label for="sekolah">Materi : </label>
+            <input class="p-2 rounded-xl" id="sekolah" type="text" >
+            <label for="alamat">Penilaian : </label>
+            <input class="p-2 rounded-xl" id="alamat" type="text">
+
+            <button type="submit" class="bg-green-500 w-60 mt-4 p-2 rounded-lg text-white" >Submit</button>
+        </form>
     </main>
 </body>
 </html>
