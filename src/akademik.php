@@ -8,7 +8,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link href="./css/output.css" rel="stylesheet">
+  <link href="output.css" rel="stylesheet">
 </head>
 <body class="bg-[#DFEBFB] h-screen flex ">
   <header class="bg-[#5651AB] w-[344px] rounded-r-3xl flex flex-col justify-start items-start ">
@@ -32,6 +32,7 @@
         <table class="table-auto bg-white text-xl w-[840px] rounded-2xl  ">
             <thead>
                 <tr class="border border-b-violet-300" >
+                    <th class="p-2 text-left">NPM</th>
                     <th class="p-2 text-left">Tanggal</th>
                     <th class="p-2 text-left">Mata Pelajaran</th>
                     <th class="p-2 text-left">Materi</th>
@@ -47,6 +48,7 @@
                 
                 <!-- ISI DATA -->
                 <tr>
+                    <td class="p-2 "><?= $data['npm'] ?> </td>
                     <td class="p-2 "><?= $data['tanggal'] ?> </td>
                     <td class="p-2 "><?= $data['matpel'] ?></td>
                     <td class="p-2 "><?= $data['materi'] ?></td>

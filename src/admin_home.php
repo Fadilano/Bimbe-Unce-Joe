@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link href="./css/output.css" rel="stylesheet">
+  <link href="output.css" rel="stylesheet">
 </head>
 <body class="bg-[#DFEBFB] h-screen flex ">
     <header class="bg-[#5651AB] w-[344px] rounded-r-3xl flex flex-col justify-between items-start ">
@@ -21,7 +21,7 @@
         </nav>
         <div class="text-[#A4B3C7] hover:text-white text-2xl m-10 flex gap-3 items-center">
             <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24"><path fill="currentColor" d="M5 21q-.825 0-1.412-.587T3 19V5q0-.825.588-1.412T5 3h7v2H5v14h7v2zm11-4l-1.375-1.45l2.55-2.55H9v-2h8.175l-2.55-2.55L16 7l5 5z"/></svg>
-            <a href="<?php $_SERVER['PHP_SELF']; ?>">Keluar</a>
+            <a href="logout.php">Keluar</a>
         </div>
     </header>
     <main class="p-16">

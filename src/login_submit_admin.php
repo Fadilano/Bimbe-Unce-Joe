@@ -5,7 +5,7 @@
     $username=$_POST['name'];
     $password=$_POST['password'];
 
-    $query="SELECT * FROM user where username='$username' AND password = '$password'";
+    $query="SELECT * FROM admin where username='$username' AND password = '$password'";
 
     $result = $con->query($query);
 
@@ -23,7 +23,7 @@
         echo "<script>alert('Wrong name or password');</script>";
     
         // Redirecting after the alert
-         echo "<script>window.location.href = 'login.php';</script>";
+         echo "<script>window.location.href = 'admin_login.php';</script>";
          exit; // Stop further execution to prevent header errors
          
     }

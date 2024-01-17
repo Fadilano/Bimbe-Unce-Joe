@@ -1,8 +1,6 @@
 <?php
-require 'connection.php';
-session_start();
-
-
+    require 'connection.php';
+    session_start();
 ?>
 <!doctype html>
 <html>
@@ -27,42 +25,26 @@ session_start();
         </nav>
         <div class="text-[#A4B3C7] hover:text-white text-2xl m-10 flex gap-3 items-center">
             <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24"><path fill="currentColor" d="M5 21q-.825 0-1.412-.587T3 19V5q0-.825.588-1.412T5 3h7v2H5v14h7v2zm11-4l-1.375-1.45l2.55-2.55H9v-2h8.175l-2.55-2.55L16 7l5 5z"/></svg>
-            <a href="logout.php">Keluar</a>
+            <a href="<?php $_SERVER['PHP_SELF']; ?>">Keluar</a>
         </div>
     </header>
     <main class="p-16 w-[841px]">
-        <h1 class="mb-4 text-5xl font-bold text-[#150D5C]">Data Siswa</h1>
-        <a href="admin_formtTambah.php" class="font-semibold p-2 bg-green-500 text-white rounded-lg" >Tambah Data</a>
-        <table class="table-auto mt-6 bg-white text-xl w-[840px] rounded-2xl  ">
-            <thead>
-                <tr class="border border-b-violet-300" >
-                    <th class="p-2 text-left">Nama</th>
-                    <th class="p-2 text-left">Kelas</th>
-                    <th class="p-2 text-left">Asal Sekolah</th>
-                    <th class="p-2 text-left">Alamat</th>
-                    <th class="p-2 text-left">No. Telepon</th>
-                </tr>
-            </thead>
-            <?php
-                $no = 1;
-                $queryData= mysqli_query($con,"SELECT * FROM tbl_datasiswa");
-                while ($data= mysqli_fetch_array($queryData)){?>
+        <h1 class="mb-4 text-5xl font-bold text-[#150D5C]">Tambah Penilaian</h1>
+        <!-- nama kelas sekolah alamat telepon -->
+        <form method="post" action="tambah_nilai.php" class=" text-[#150D5C] flex flex-col gap-3">
+            <label for="npm">NPM : </label>
+            <input class="p-2 rounded-xl" name="npm" id="npm" type="text">
+            <label for="nama">Tanggal : </label>
+            <input class="p-2 rounded-xl" name="tanggal" id="tanggal" type="date">
+            <label for="kelas">Mata Pelajaran : </label>
+            <input class="p-2 rounded-xl" name="matpel" id="matpel" type="text" >
+            <label for="sekolah">Materi : </label>
+            <input class="p-2 rounded-xl" name="materi" id="materi" type="text" >
+            <label for="alamat">Penilaian : </label>
+            <input class="p-2 rounded-xl" name="nilai" id="nilai" type="text">
 
-            <tbody class="">
-                <!-- ISI DATA -->
-                <tr>
-                    <td class="p-2 "><?= $data['nama'] ?></td>
-                    <td class="p-2 "><?= $data['kelas'] ?></td>
-                    <td class="p-2 "><?= $data['sekolah'] ?></td>
-                    <td class="p-2 "><?= $data['alamat'] ?></td>
-                    <td class="p-2 "><?= $data['telepon'] ?></td>
-                    <td><a href="admin_DataPenilaian.php" class="p-1 border border-black ">Laporan Penilaian</a></td>
-                    <td><a href="deleteSiswa.php?npm=<?php echo $data['npm'] ?>" class="p-1 border border-2 text-white border-black bg-red-400 ">Delete</a></td>
-                    
-                </tr>
-                <?php } ?>
-            </tbody>
-        </table>
+            <button type="submit" name="submit" class="bg-green-500 w-60 mt-4 p-2 rounded-lg text-white" >Submit</button>
+        </form>
     </main>
 </body>
 </html>

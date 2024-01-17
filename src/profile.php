@@ -8,7 +8,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link href="./css/output.css" rel="stylesheet">
+  <link href="output.css" rel="stylesheet">
 </head>
 <body class="bg-[#DFEBFB] h-screen flex ">
     <header class="bg-[#5651AB] w-[344px] rounded-r-3xl flex flex-col justify-between items-start ">
@@ -38,7 +38,7 @@
         <div class="mb-16 flex justify-start items-center bg-white p-8 gap-10 w-[872px] rounded-3xl">
             <div class="left"><img src="assets/img/Profile.img" class="w-60" alt=""></div>
             <?php 
-            $query = mysqli_query($con,"SELECT * FROM tbl_datasiswa, user where user.npm = tbl_datasiswa.npm ");
+            $query = mysqli_query($con,"SELECT * FROM tbl_datasiswa where npm = 51421104 ");
             if($query){
                 $data=mysqli_fetch_assoc($query);
                 ?>
@@ -59,19 +59,19 @@
         <div class="justify-start items-center bg-white p-8 gap-10 w-[872px] rounded-3xl">
             <h1 class="text-3xl font-semibold mb-4">Status Pembayaran</h1>
             <div class="bg-[#DBFFEF] p-4 rounded-3xl mb-4">
-                <span class="text-xl font-semibold">Maret</span>
+                <span class="text-xl font-semibold">September</span>
                 <p class="text-[#5E5E5E]">Telah Lunas Pada 5 Maret 2023</p>
             </div>
             <div class="bg-[#DBFFEF] p-4 rounded-3xl mb-4">
-                <span class="text-xl font-semibold">Maret</span>
+                <span class="text-xl font-semibold">Oktober</span>
                 <p class="text-[#5E5E5E]">Telah Lunas Pada 5 Maret 2023</p>
             </div>
             <div class="bg-[#DBFFEF] p-4 rounded-3xl mb-4">
-                <span class="text-xl font-semibold">Maret</span>
+                <span class="text-xl font-semibold">Novermber</span>
                 <p class="text-[#5E5E5E]">Telah Lunas Pada 5 Maret 2023</p>
             </div>
             <div class="bg-[#FFEAF1] p-4 rounded-3xl">
-                <span class="text-xl font-semibold">Maret</span>
+                <span class="text-xl font-semibold">Desember</span>
                 <p class="text-[#5E5E5E]">Telah Lunas Pada 5 Maret 2023</p>
             </div>
         </div>
