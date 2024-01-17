@@ -1,3 +1,8 @@
+<?php
+    require 'connection.php';
+    session_start();
+
+?>
 <!doctype html>
 <html>
 <head>
@@ -32,13 +37,24 @@
     <main class="p-16">
         <div class="mb-16 flex justify-start items-center bg-white p-8 gap-10 w-[872px] rounded-3xl">
             <div class="left"><img src="assets/img/Profile.img" class="w-60" alt=""></div>
-            <div class="text-[#5E5E5E]">
-                <p class="text-3xl text-black font-semibold mb-2">Nama </p>
-                <p>Kelas/Jenjang Pendidikan: </p>
-                <p>Asal Sekolah:</p>
-                <p>Alamat: </p>
-                <p>No. Telepon: </p>
-            </div>
+            <?php 
+            $query = mysqli_query($con,"SELECT * FROM tbl_datasiswa, user where user.npm = tbl_datasiswa.npm ");
+            if($query){
+                $data=mysqli_fetch_assoc($query);
+                ?>
+                <div class="text-[#5E5E5E]">
+                    <p class="text-3xl text-black font-semibold mb-2"><?php echo $data['nama']; ?> </p>
+                    <p>Kelas/Jenjang Pendidikan : <?php echo $data['kelas']; ?> </p>
+                    <p>Asal Sekolah : <?php echo $data['sekolah']; ?></p>
+                    <p>Alamat : <?php echo $data['alamat']; ?></p>
+                    <p>No. Telepon : <?php echo $data['telepon']; ?> </p>
+                </div>
+                <?php
+            } else {
+                echo "erorr" .mysqli_error($con);
+            }
+            ?>
+            
         </div>
         <div class="justify-start items-center bg-white p-8 gap-10 w-[872px] rounded-3xl">
             <h1 class="text-3xl font-semibold mb-4">Status Pembayaran</h1>

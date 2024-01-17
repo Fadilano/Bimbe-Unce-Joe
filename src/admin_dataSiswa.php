@@ -1,3 +1,9 @@
+<?php
+require 'connection.php';
+session_start();
+
+
+?>
 <!doctype html>
 <html>
 <head>
@@ -36,16 +42,22 @@
                     <th class="p-2 text-left">No. Telepon</th>
                 </tr>
             </thead>
+            <?php
+                $no = 1;
+                $queryData= mysqli_query($con,"SELECT * FROM tbl_datasiswa");
+                while ($data= mysqli_fetch_array($queryData)){?>
+
             <tbody class="">
                 <!-- ISI DATA -->
                 <tr>
-                    <td class="p-2 ">Fadilano Abraham</td>
-                    <td class="p-2 ">5 SD</td>
-                    <td class="p-2 ">SDN Tadika Mesra</td>
-                    <td class="p-2 ">Bekasi</td>
-                    <td class="p-2 ">081029312</td>
+                    <td class="p-2 "><?= $data['nama'] ?></td>
+                    <td class="p-2 "><?= $data['kelas'] ?></td>
+                    <td class="p-2 "><?= $data['sekolah'] ?></td>
+                    <td class="p-2 "><?= $data['alamat'] ?></td>
+                    <td class="p-2 "><?= $data['telepon'] ?></td>
                     
                 </tr>
+                <?php } ?>
             </tbody>
         </table>
     </main>
