@@ -3,16 +3,18 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link href="./output.css" rel="stylesheet">
+  <link href="./css/output.css" rel="stylesheet">
 </head>
 <body class="bg-[#5651AB] h-screen flex justify-center items-center">
-        <div class="bg-white w-[407px] h-[431px] rounded-3xl flex flex-col justify-center items-center gap-6">
-            <img src="assets/img/logo.png" alt="">
-            <input id="nama"type="text" placeholder="Nama" class="bg-[#DFEBFB] rounded-3xl w-72 h-12 p-5 ">
-            <input id="password"type="password" placeholder="Kata sandi" class="bg-[#DFEBFB] rounded-3xl w-72 h-12 p-5">
-            <div></div>
-            <button class="bg-[#29A06A] rounded-3xl w-72 h-12 text-white">Masuk</button>
-        </div>
+  <div class="bg-white w-[407px] h-[431px] rounded-3xl flex flex-col justify-center items-center gap-6">
+    <img src="assets/img/logo.png" alt="">
+    <form action="POST" class="flex flex-col justify-center gap-3">
+      <input id="nama"type="text" placeholder="Nama" class="bg-[#DFEBFB] rounded-3xl w-72 h-12 p-5 ">
+      <input id="password"type="password" placeholder="Kata sandi" class="bg-[#DFEBFB] rounded-3xl w-72 h-12 p-5">
+      <div></div>
+      <button type="submit" class="bg-[#29A06A] rounded-3xl w-72 h-12 text-white">Masuk</button>
+    </form>
+  </div>
     
 </body>
 </html> 

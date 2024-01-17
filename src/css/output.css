@@ -708,6 +708,38 @@ video {
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
 }
 
+.bg-\[url\] {
+  background-color: url;
+}
+
+.bg-\[\] {
+  background-color: ;
+}
+
+.bg-\[url\(\'\/img\/hero-pattern\.svg\'\)\] {
+  background-image: url('/img/hero-pattern.svg');
+}
+
+.bg-\[url\(\'\/assets\/img\/background\.png\'\)\] {
+  background-image: url('/assets/img/background.png');
+}
+
+.bg-\[url\(\"\/assets\/img\/background\.png\"\)\] {
+  background-image: url("/assets/img/background.png");
+}
+
+.bg-\[url\(\'src\/assets\/img\/background\.png\'\)\] {
+  background-image: url('src/assets/img/background.png');
+}
+
+.bg-hero-pattern {
+  background-image: url('src/assets/img/background.png');
+}
+
+.bg-cover {
+  background-size: cover;
+}
+
 .p-16 {
   padding: 4rem;
 }
