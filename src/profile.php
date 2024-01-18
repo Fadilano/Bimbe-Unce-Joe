@@ -60,9 +60,9 @@
             
         </div>
         <table class="table-auto mt-8 bg-white text-xl w-[840px] rounded-2xl  ">
+            <h1 class="text-3xl font-semibold mb-4">Status Pembayaran</h1>
             <thead>
                 <tr class="border border-b-violet-300" >
-                    <th class="p-2 text-left">Id Siswa</th>
                     <th class="p-2 text-left">Bulan</th>
                     <th class="p-2 text-left">Metode</th>
                     <th class="p-2 text-left">tanggal</th>
@@ -71,23 +71,29 @@
                 </tr>
             </thead>
             <tbody class="">
-                <?php
-                $no = 1;
-                $querySiswa= mysqli_query($con,"SELECT * FROM tbl_laporan");
-                while ($data= mysqli_fetch_array($querySiswa)){?>
-                
-                
-                <!-- ISI DATA Belom gua edit -->
-                <tr>
- 
-                    <td class="p-2 "><?= $data['npm'] ?> </td>                 
-                    <td class="p-2 "><?= $data['tanggal'] ?> </td>
-                    <td class="p-2 "><?= $data['matpel'] ?></td>
-                    <td class="p-2 "><?= $data['matpel'] ?></td>
-                    <td class="p-2 "><?= $data['penilaian'] ?></td>
-                    <td><a href="deleteNilai.php?id=<?php echo $data['id'] ?>" class="p-1 border border-2 text-white border-black bg-red-400 rounded-xl">Delete</a></td>
-                </tr>
-                <?php } ?>
+            <?php 
+                if(isset($_SESSION['id'])){
+                    $username = $_SESSION['id'];
+                    $query = mysqli_query($con,"SELECT * FROM tbl_pembayaran where id_siswa = '$username'");
+                    if($query){
+                        while ($data=mysqli_fetch_array($query)){?>
+                        
+                            <!-- ISI DATA Belom gua edit -->
+                            <tr>
+                                           
+                            <td class="p-2 "><?= $data['bulan'] ?> </td>
+                            <td class="p-2 "><?= $data['metode'] ?></td>
+                            <td class="p-2 "><?= $data['tanggal'] ?></td>
+                            <td class="p-2 "><?= $data['status'] ?></td>
+                        <?php } ?>
+                    
+
+                        <?php
+                    } else {
+                        echo "erorr" .mysqli_error($con);
+                    }   
+                }
+                ?>
             </tbody>
         </table>
     </main>

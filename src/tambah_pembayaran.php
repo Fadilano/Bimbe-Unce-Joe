@@ -5,15 +5,15 @@
     if(isset($_POST['submit'])) {
 
         $id = $_POST['id'];
+        $bulan = $_POST['bulan'];
+        $metode = $_POST['metode'];
         $tanggal = $_POST['tanggal'];
-        $matpel = $_POST['matpel'];
-        $materi = $_POST['materi'];
-        $nilai = $_POST['nilai'];
+        $status = $_POST['status'];
     
-        mysqli_query($con,"INSERT INTO tbl_laporan values('','$id','$tanggal','$matpel','$materi','$nilai')");
+        mysqli_query($con,"INSERT INTO tbl_pembayaran values('','$id','$bulan','$metode','$tanggal','$status')");
     
         echo "<script>
-                alert('nilai siswa berhasil di simpan');
+                alert('pembayaran berhasil di tambah');
                 document.location.href = 'admin_dataSiswa.php';
         
         

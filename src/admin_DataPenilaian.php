@@ -42,23 +42,31 @@
                 </tr>
             </thead>
             <tbody class="">
-                <?php
-                $no = 1;
-                $querySiswa= mysqli_query($con,"SELECT * FROM tbl_laporan");
-                while ($data= mysqli_fetch_array($querySiswa)){?>
-                
-                
-                <!-- ISI DATA -->
-                <tr>
 
-                    <td class="p-2 "><?= $data['id_siswa'] ?> </td>
-                    <td class="p-2 "><?= $data['tanggal'] ?> </td>
-                    <td class="p-2 "><?= $data['matpel'] ?></td>
-                    <td class="p-2 "><?= $data['materi'] ?></td>
-                    <td class="p-2 "><?= $data['penilaian'] ?></td>
-                    <td><a href="deleteNilai.php?id=<?php echo $data['id'] ?>" class="p-1 border border-2 text-white border-black bg-red-400 rounded-xl">Delete</a></td>
-                </tr>
-                <?php } ?>
+            
+            <?php 
+                if(isset($_GET['id_siswa'])){
+                    $id_siswa = $_GET['id_siswa'];
+                    $query = mysqli_query($con,"SELECT * FROM tbl_laporan WHERE id_siswa = $id_siswa ");
+                    if($query){
+                        while ($data=mysqli_fetch_array($query)){?>
+                        <tr>
+                            <td class="p-2 "><?= $data['id_siswa'] ?> </td>
+                            <td class="p-2 "><?= $data['tanggal'] ?> </td>
+                            <td class="p-2 "><?= $data['matpel'] ?></td>
+                            <td class="p-2 "><?= $data['materi'] ?></td>
+                            <td class="p-2 "><?= $data['penilaian'] ?></td>
+                            <td><a href="deleteNilai.php?id=<?php echo $data['id'] ?>" class="p-1 border border-2 text-white border-black bg-red-400 rounded-xl">Delete</a></td>
+                        </tr>
+                        <?php } ?>
+                    
+
+                        <?php
+                    } else {
+                        echo "erorr" .mysqli_error($con);
+                    }   
+                }
+                ?>
             </tbody>
         </table>
     </main>

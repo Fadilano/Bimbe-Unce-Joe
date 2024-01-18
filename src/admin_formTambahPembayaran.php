@@ -31,15 +31,17 @@
     <main class="p-16 w-[841px]">
         <h1 class="mb-4 text-5xl font-bold text-[#150D5C]">Tambah Pembayaran</h1>
         <!-- nama kelas sekolah alamat telepon -->
-        <form method="post" action="" class=" text-[#150D5C] flex flex-col gap-3">
+        <form method="post" action="tambah_pembayaran.php" class=" text-[#150D5C] flex flex-col gap-3">
+            <label for="bulan">Id_siswa : </label>
+            <input class="p-2 rounded-xl" name="id" id="id" type="text">
             <label for="bulan">Bulan : </label>
             <input class="p-2 rounded-xl" name="bulan" id="bulan" type="text">
-            <label for="status">Status : </label>
-            <input class="p-2 rounded-xl" name="status" id="status" type="text">
+            <label for="status">metode : </label>
+            <input class="p-2 rounded-xl" name="metode" id="metode" type="text">
             <label for="status">Tanggal Lunas : </label>
-            <input class="p-2 rounded-xl" name="metode" id="metode" type="date" >
-            <label for="metode">Metode : </label>
-            <input class="p-2 rounded-xl" name="materi" id="materi" type="text" >
+            <input class="p-2 rounded-xl" name="tanggal" id="tanggal" type="date" >
+            <label for="metode">status : </label>
+            <input class="p-2 rounded-xl" name="status" id="status" type="text" >
             
             <button type="submit" name="submit" class="bg-green-500 w-60 mt-4 p-2 rounded-lg text-white" >Submit</button>
         </form>

@@ -29,7 +29,7 @@
         </div>
     </header>
     <main class="p-16 w-[841px]">
-        <h1 class="mb-4 text-5xl font-bold text-[#150D5C]">Laporan Pembelajaran Siswa</h1>
+        <h1 class="mb-4 text-5xl font-bold text-[#150D5C]">Status Pembayaran</h1>
         <a href="admin_formTambahPembayaran.php" class="font-semibold p-2 bg-green-500 text-white rounded-lg" >Tambah Data</a>
         <!-- DATA PEMBAYARAN -->
         <table class="table-auto mt-8 bg-white text-xl w-[840px] rounded-2xl  ">
@@ -44,23 +44,30 @@
                 </tr>
             </thead>
             <tbody class="">
-                <?php
-                $no = 1;
-                $querySiswa= mysqli_query($con,"SELECT * FROM tbl_laporan");
-                while ($data= mysqli_fetch_array($querySiswa)){?>
-                
-                
-                <!-- ISI DATA Belom gua edit -->
-                <tr>
- 
-                    <td class="p-2 "><?= $data['npm'] ?> </td>                 
-                    <td class="p-2 "><?= $data['tanggal'] ?> </td>
-                    <td class="p-2 "><?= $data['matpel'] ?></td>
-                    <td class="p-2 "><?= $data['matpel'] ?></td>
-                    <td class="p-2 "><?= $data['penilaian'] ?></td>
-                    <td><a href="deleteNilai.php?id=<?php echo $data['id'] ?>" class="p-1 border border-2 text-white border-black bg-red-400 rounded-xl">Delete</a></td>
-                </tr>
-                <?php } ?>
+
+            <?php 
+                if(isset($_GET['id_siswa'])){
+                    $id_siswa = $_GET['id_siswa'];
+                    $query = mysqli_query($con,"SELECT * FROM tbl_pembayaran WHERE id_siswa = $id_siswa ");
+                    if($query){
+                        while ($data=mysqli_fetch_array($query)){?>
+                        <tr>
+                            <td class="p-2 "><?= $data['id_siswa'] ?> </td>
+                            <td class="p-2 "><?= $data['bulan'] ?> </td>
+                            <td class="p-2 "><?= $data['metode'] ?></td>
+                            <td class="p-2 "><?= $data['tanggal'] ?></td>
+                            <td class="p-2 "><?= $data['status'] ?></td>
+                            <td><a href="delete_pembayaran.php?id=<?php echo $data['id'] ?>" class="p-1 border border-2 text-white border-black bg-red-400 rounded-xl">Delete</a></td>
+                        </tr>
+                        <?php } ?>
+                    
+
+                        <?php
+                    } else {
+                        echo "erorr" .mysqli_error($con);
+                    }   
+                }
+                ?>
             </tbody>
         </table>
         <!-- Data Pembayaran end -->
