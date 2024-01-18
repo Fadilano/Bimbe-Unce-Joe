@@ -38,9 +38,9 @@
         <div class="mb-16 flex justify-start items-center bg-white p-8 gap-10 w-[872px] rounded-3xl">
             <div class="left"><img src="assets/img/Profile.img" class="w-60" alt=""></div>
             <?php 
-            if(isset($_SESSION['name'])){
-                $username = $_SESSION['name'];
-                $query = mysqli_query($con,"SELECT * FROM tbl_datasiswa where nama = '$username'");
+            if(isset($_SESSION['id'])){
+                $username = $_SESSION['id'];
+                $query = mysqli_query($con,"SELECT * FROM tbl_datasiswa where id_siswa = '$username'");
                 if($query){
                     $data=mysqli_fetch_assoc($query);
                     ?>

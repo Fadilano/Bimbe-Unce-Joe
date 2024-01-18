@@ -2,12 +2,12 @@
     require 'connection.php';
     session_start();
 
-    $username=$_POST['name'];
+    $username=$_POST['id'];
     $password=$_POST['password'];
 
-    $_SESSION['name']=$username;
+    $_SESSION['id']=$username;
 
-    $query="SELECT * FROM user where username='$username' AND password = '$password'";
+    $query="SELECT * FROM user where id_siswa ='$username' AND password = '$password'";
 
     $result = $con->query($query);
 

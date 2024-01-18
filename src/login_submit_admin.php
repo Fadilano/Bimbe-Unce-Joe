@@ -2,10 +2,10 @@
     require 'connection.php';
     session_start();
 
-    $username=$_POST['name'];
+    $username=$_POST['id'];
     $password=$_POST['password'];
 
-    $query="SELECT * FROM admin where username='$username' AND password = '$password'";
+    $query="SELECT * FROM admin where kode_guru='$username' AND password = '$password'";
 
     $result = $con->query($query);
 

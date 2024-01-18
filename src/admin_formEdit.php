@@ -32,8 +32,8 @@
         <h1 class="mb-4 text-5xl font-bold text-[#150D5C]">Tambah Penilaian</h1>
         <!-- nama kelas sekolah alamat telepon -->
         <form method="post" action="tambah_nilai.php" class=" text-[#150D5C] flex flex-col gap-3">
-            <label for="npm">NPM : </label>
-            <input class="p-2 rounded-xl" name="npm" id="npm" type="text">
+            <label for="npm">Id Siswa : </label>
+            <input class="p-2 rounded-xl" name="id" id="id" type="text">
             <label for="nama">Tanggal : </label>
             <input class="p-2 rounded-xl" name="tanggal" id="tanggal" type="date">
             <label for="kelas">Mata Pelajaran : </label>

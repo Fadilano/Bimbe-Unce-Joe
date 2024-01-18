@@ -28,8 +28,8 @@
         <h1 class="mb-4 text-5xl font-bold text-[#150D5C]">Tambah Data Siswa</h1>
         <!-- nama kelas sekolah alamat telepon -->
         <form method="post" action="tambah_data_siswa.php" class=" text-[#150D5C] flex flex-col gap-3">
-            <label for="npm">NPM : </label>
-            <input class="p-2 rounded-xl" name="npm" id="npm" type="text">
+            <label for="npm">Id Siswa : </label>
+            <input class="p-2 rounded-xl" name="id" id="id" type="text">
             <label for="nama">Nama : </label>
             <input class="p-2 rounded-xl" name="nama" id="nama" type="text">
             <label for="kelas">Kelas : </label>

@@ -38,7 +38,7 @@ session_start();
                 <tr class="border border-b-violet-300" >
                     <th class="p-2 text-left">Nama</th>
                     <th class="p-2 text-left">Kelas</th>
-                    <th class="p-2 text-left">Asal Sekolah</th>
+                    <th class="p-2 text-left">Asal_Sekolah</th>
                     <th class="p-2 text-left">Alamat</th>
                     <th class="p-2 text-left">No. Telepon</th>
                 </tr>
@@ -56,9 +56,9 @@ session_start();
                     <td class="p-2 "><?= $data['sekolah'] ?></td>
                     <td class="p-2 "><?= $data['alamat'] ?></td>
                     <td class="p-2 "><?= $data['telepon'] ?></td>
-                    <td><a href="admin_DataPenilaian.php" class="p-1 border border-black rounded-lg">Laporan Penilaian</a></td>
+                    <td><a href="admin_DataPenilaian.php" class="p-1 border border-black rounded-lg">Laporan_Penilaian</a></td>
                     <td><a href="admin_DataPembayaran.php" class="p-1 border border-black rounded-lg">Status Pembayaran</a></td>
-                    <td><a href="deleteSiswa.php?npm=<?php echo $data['npm'] ?>" class="p-1 border border-2 text-white border-black bg-red-400 ">Delete</a></td>
+                    <td><a href="deleteSiswa.php?id_siswa=<?php echo $data['id_siswa'] ?>" class="p-1 border border-2 text-white border-black bg-red-400 ">Delete</a></td>
                     
                 </tr>
                 <?php } ?>

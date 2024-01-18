@@ -13,7 +13,7 @@
   <form method="post" action="login_submit.php" >
   <div class="bg-white w-[407px] h-[431px] rounded-3xl flex flex-col justify-center items-center gap-6">
             <img src="assets/img/logo.png" alt="">
-            <input id="name" name="name" type="text" placeholder="Nama" class="bg-[#DFEBFB] rounded-3xl w-72 h-12 p-5 ">
+            <input id="id" name="id" type="text" placeholder="Masukkan ID" class="bg-[#DFEBFB] rounded-3xl w-72 h-12 p-5 ">
             <input id="password" name="password" type="password" placeholder="Kata sandi" class="bg-[#DFEBFB] rounded-3xl w-72 h-12 p-5">
             <div></div>
             <button type="submit" value="login" class="bg-[#29A06A] rounded-3xl w-72 h-12 text-white">Masuk</button>

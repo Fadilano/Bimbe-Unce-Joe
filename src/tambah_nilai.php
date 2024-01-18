@@ -4,13 +4,13 @@
 
     if(isset($_POST['submit'])) {
 
-        $npm = $_POST['npm'];
+        $id = $_POST['id'];
         $tanggal = $_POST['tanggal'];
         $matpel = $_POST['matpel'];
         $materi = $_POST['materi'];
         $nilai = $_POST['nilai'];
     
-        mysqli_query($con,"INSERT INTO tbl_laporan values('','$npm','$tanggal','$matpel','$materi','$nilai')");
+        mysqli_query($con,"INSERT INTO tbl_laporan values('','$id','$tanggal','$matpel','$materi','$nilai')");
     
         echo "<script>
                 alert('nilai siswa berhasil di simpan');

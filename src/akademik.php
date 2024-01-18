@@ -40,21 +40,30 @@
                 </tr>
             </thead>
             <tbody class="">
-                <?php
-                $no = 1;
-                $querySiswa= mysqli_query($con,"SELECT * FROM tbl_laporan");
-                while ($data= mysqli_fetch_array($querySiswa)){?>
-                
-                
-                <!-- ISI DATA -->
-                <tr>
-                    <td class="p-2 "><?= $data['npm'] ?> </td>
-                    <td class="p-2 "><?= $data['tanggal'] ?> </td>
-                    <td class="p-2 "><?= $data['matpel'] ?></td>
-                    <td class="p-2 "><?= $data['materi'] ?></td>
-                    <td class="p-2 "><?= $data['penilaian'] ?></td>
-                </tr>
-                <?php } ?>
+
+                <?php 
+                if(isset($_SESSION['id'])){
+                    $username = $_SESSION['id'];
+                    $query = mysqli_query($con,"SELECT * FROM tbl_laporan where id_siswa = '$username'");
+                    if($query){
+                        while ($data=mysqli_fetch_array($query)){?>
+                        
+                        <tr>
+                            <td class="p-2 "><?= $data['id_siswa'] ?> </td>
+                            <td class="p-2 "><?= $data['tanggal'] ?> </td>
+                            <td class="p-2 "><?= $data['matpel'] ?></td>
+                            <td class="p-2 "><?= $data['materi'] ?></td>
+                            <td class="p-2 "><?= $data['penilaian'] ?></td>
+                        </tr>
+                        <?php } ?>
+                    
+
+                        <?php
+                    } else {
+                        echo "erorr" .mysqli_error($con);
+                    }   
+                }
+                ?>
             </tbody>
         </table>
     </main>

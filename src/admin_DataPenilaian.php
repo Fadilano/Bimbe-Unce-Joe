@@ -34,9 +34,8 @@
         <table class="table-auto mt-8 bg-white text-xl w-[840px] rounded-2xl  ">
             <thead>
                 <tr class="border border-b-violet-300" >
-                    <th class="p-2 text-left">NPM</th>
+                    <th class="p-2 text-left">Id Siswa</th>
                     <th class="p-2 text-left">Tanggal</th>
-                    <th class="p-2 text-left">Mata Pelajaran</th>
                     <th class="p-2 text-left">Mata Pelajaran</th>
                     <th class="p-2 text-left">Materi</th>
                     <th class="p-2 text-left">Penilaian</th>
@@ -52,9 +51,8 @@
                 <!-- ISI DATA -->
                 <tr>
 
-                    <td class="p-2 "><?= $data['npm'] ?> </td>
+                    <td class="p-2 "><?= $data['id_siswa'] ?> </td>
                     <td class="p-2 "><?= $data['tanggal'] ?> </td>
-                    <td class="p-2 "><?= $data['matpel'] ?></td>
                     <td class="p-2 "><?= $data['matpel'] ?></td>
                     <td class="p-2 "><?= $data['materi'] ?></td>
                     <td class="p-2 "><?= $data['penilaian'] ?></td>
