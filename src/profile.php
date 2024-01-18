@@ -38,20 +38,23 @@
         <div class="mb-16 flex justify-start items-center bg-white p-8 gap-10 w-[872px] rounded-3xl">
             <div class="left"><img src="assets/img/Profile.img" class="w-60" alt=""></div>
             <?php 
-            $query = mysqli_query($con,"SELECT * FROM tbl_datasiswa where npm = 51421104 ");
-            if($query){
-                $data=mysqli_fetch_assoc($query);
-                ?>
-                <div class="text-[#5E5E5E]">
-                    <p class="text-3xl text-black font-semibold mb-2"><?php echo $data['nama']; ?> </p>
-                    <p>Kelas/Jenjang Pendidikan : <?php echo $data['kelas']; ?> </p>
-                    <p>Asal Sekolah : <?php echo $data['sekolah']; ?></p>
-                    <p>Alamat : <?php echo $data['alamat']; ?></p>
-                    <p>No. Telepon : <?php echo $data['telepon']; ?> </p>
-                </div>
-                <?php
-            } else {
-                echo "erorr" .mysqli_error($con);
+            if(isset($_SESSION['name'])){
+                $username = $_SESSION['name'];
+                $query = mysqli_query($con,"SELECT * FROM tbl_datasiswa where nama = '$username'");
+                if($query){
+                    $data=mysqli_fetch_assoc($query);
+                    ?>
+                    <div class="text-[#5E5E5E]">
+                        <p class="text-3xl text-black font-semibold mb-2"><?php echo $data['nama']; ?> </p>
+                        <p>Kelas/Jenjang Pendidikan : <?php echo $data['kelas']; ?> </p>
+                        <p>Asal Sekolah : <?php echo $data['sekolah']; ?></p>
+                        <p>Alamat : <?php echo $data['alamat']; ?></p>
+                        <p>No. Telepon : <?php echo $data['telepon']; ?> </p>
+                    </div>
+                    <?php
+                } else {
+                    echo "erorr" .mysqli_error($con);
+                }   
             }
             ?>
             

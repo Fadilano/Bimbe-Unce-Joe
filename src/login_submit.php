@@ -5,6 +5,8 @@
     $username=$_POST['name'];
     $password=$_POST['password'];
 
+    $_SESSION['name']=$username;
+
     $query="SELECT * FROM user where username='$username' AND password = '$password'";
 
     $result = $con->query($query);
