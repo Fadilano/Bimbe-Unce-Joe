@@ -33,9 +33,9 @@ session_start();
     <main class="p-16 w-[841px]">
         <h1 class="mb-4 text-5xl font-bold text-[#150D5C]">Data Siswa</h1>
         <a href="admin_formtTambah.php" class="font-semibold p-2 bg-green-500 text-white rounded-lg" >Tambah Data</a>
-        <table class="table-auto mt-6 bg-white text-xl w-[840px] rounded-2xl  ">
+        <table class="table-auto mt-6 bg-white text-xl w-[840px] h-auto rounded-2xl whitespace-nowrap">
             <thead>
-                <tr class="border border-b-violet-300" >
+                <tr class="border border-b-violet-300 whitespace-nowrap">
                     <th class="p-2 text-left">Nama</th>
                     <th class="p-2 text-left">Kelas</th>
                     <th class="p-2 text-left">Asal Sekolah</th>
@@ -48,7 +48,7 @@ session_start();
                 $queryData= mysqli_query($con,"SELECT * FROM tbl_datasiswa");
                 while ($data= mysqli_fetch_array($queryData)){?>
 
-            <tbody class="">
+            <tbody class="whitespace-nowrap">
                 <!-- ISI DATA -->
                 <tr>
                     <td class="p-2 "><?= $data['nama'] ?></td>
@@ -56,9 +56,9 @@ session_start();
                     <td class="p-2 "><?= $data['sekolah'] ?></td>
                     <td class="p-2 "><?= $data['alamat'] ?></td>
                     <td class="p-2 "><?= $data['telepon'] ?></td>
-                    <td><a href="admin_DataPenilaian.php" class="p-1 border border-black rounded-lg">Laporan Penilaian</a></td>
-                    <td><a href="admin_DataPembayaran.php" class="p-1 border border-black rounded-lg">Status Pembayaran</a></td>
-                    <td><a href="deleteSiswa.php?npm=<?php echo $data['npm'] ?>" class="p-1 border border-2 text-white border-black bg-red-400 ">Delete</a></td>
+                    <td class="p-2 "><a href="admin_DataPenilaian.php" class="p-1 border border-black rounded-lg">Laporan_Penilaian</a></td>
+                    <td class="p-2 "><a href="admin_DataPembayaran.php" class="p-1 border border-black rounded-lg">Status_Pembayaran</a></td>
+                    <td class="p-2 "><a href="deleteSiswa.php?npm=<?php echo $data['npm'] ?>" class="p-1  text-white bg-red-400 ">Delete</a></td>
                     
                 </tr>
                 <?php } ?>

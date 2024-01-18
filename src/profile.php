@@ -59,25 +59,37 @@
             ?>
             
         </div>
-        <div class="justify-start items-center bg-white p-8 gap-10 w-[872px] rounded-3xl">
-            <h1 class="text-3xl font-semibold mb-4">Status Pembayaran</h1>
-            <div class="bg-[#DBFFEF] p-4 rounded-3xl mb-4">
-                <span class="text-xl font-semibold">September</span>
-                <p class="text-[#5E5E5E]">Telah Lunas Pada 5 Maret 2023</p>
-            </div>
-            <div class="bg-[#DBFFEF] p-4 rounded-3xl mb-4">
-                <span class="text-xl font-semibold">Oktober</span>
-                <p class="text-[#5E5E5E]">Telah Lunas Pada 5 Maret 2023</p>
-            </div>
-            <div class="bg-[#DBFFEF] p-4 rounded-3xl mb-4">
-                <span class="text-xl font-semibold">Novermber</span>
-                <p class="text-[#5E5E5E]">Telah Lunas Pada 5 Maret 2023</p>
-            </div>
-            <div class="bg-[#FFEAF1] p-4 rounded-3xl">
-                <span class="text-xl font-semibold">Desember</span>
-                <p class="text-[#5E5E5E]">Telah Lunas Pada 5 Maret 2023</p>
-            </div>
-        </div>
+        <table class="table-auto mt-8 bg-white text-xl w-[840px] rounded-2xl  ">
+            <thead>
+                <tr class="border border-b-violet-300" >
+                    <th class="p-2 text-left">Id Siswa</th>
+                    <th class="p-2 text-left">Bulan</th>
+                    <th class="p-2 text-left">Metode</th>
+                    <th class="p-2 text-left">tanggal</th>
+                    <th class="p-2 text-left">Status</th>
+                    
+                </tr>
+            </thead>
+            <tbody class="">
+                <?php
+                $no = 1;
+                $querySiswa= mysqli_query($con,"SELECT * FROM tbl_laporan");
+                while ($data= mysqli_fetch_array($querySiswa)){?>
+                
+                
+                <!-- ISI DATA Belom gua edit -->
+                <tr>
+ 
+                    <td class="p-2 "><?= $data['npm'] ?> </td>                 
+                    <td class="p-2 "><?= $data['tanggal'] ?> </td>
+                    <td class="p-2 "><?= $data['matpel'] ?></td>
+                    <td class="p-2 "><?= $data['matpel'] ?></td>
+                    <td class="p-2 "><?= $data['penilaian'] ?></td>
+                    <td><a href="deleteNilai.php?id=<?php echo $data['id'] ?>" class="p-1 border border-2 text-white border-black bg-red-400 rounded-xl">Delete</a></td>
+                </tr>
+                <?php } ?>
+            </tbody>
+        </table>
     </main>
 </body>
 </html>

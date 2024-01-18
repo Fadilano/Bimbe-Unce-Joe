@@ -51,8 +51,8 @@
                 
                 <!-- ISI DATA -->
                 <tr>
-
-                    <td class="p-2 "><?= $data['npm'] ?> </td>
+ 
+                    <td class="p-2 "><?= $data['npm'] ?> </td>                 
                     <td class="p-2 "><?= $data['tanggal'] ?> </td>
                     <td class="p-2 "><?= $data['matpel'] ?></td>
                     <td class="p-2 "><?= $data['matpel'] ?></td>
