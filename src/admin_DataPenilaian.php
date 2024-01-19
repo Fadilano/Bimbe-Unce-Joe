@@ -34,11 +34,11 @@
         <table class="table-auto mt-8 bg-white text-xl w-[840px] rounded-2xl  ">
             <thead>
                 <tr class="border border-b-violet-300" >
-                    <th class="p-2 text-left">Id Siswa</th>
-                    <th class="p-2 text-left">Tanggal</th>
-                    <th class="p-2 text-left">Mata Pelajaran</th>
-                    <th class="p-2 text-left">Materi</th>
-                    <th class="p-2 text-left">Penilaian</th>
+                    <th class="p-4 text-left">Id Siswa</th>
+                    <th class="p-4 text-left">Tanggal</th>
+                    <th class="p-4 text-left">Mata Pelajaran</th>
+                    <th class="p-4 text-left">Materi</th>
+                    <th class="p-4 text-left">Penilaian</th>
                 </tr>
             </thead>
             <tbody class="">
@@ -51,12 +51,12 @@
                     if($query){
                         while ($data=mysqli_fetch_array($query)){?>
                         <tr>
-                            <td class="p-2 "><?= $data['id_siswa'] ?> </td>
-                            <td class="p-2 "><?= $data['tanggal'] ?> </td>
-                            <td class="p-2 "><?= $data['matpel'] ?></td>
-                            <td class="p-2 "><?= $data['materi'] ?></td>
-                            <td class="p-2 "><?= $data['penilaian'] ?></td>
-                            <td><a href="deleteNilai.php?id=<?php echo $data['id'] ?>" class="p-1 border border-2 text-white border-black bg-red-400 rounded-xl">Delete</a></td>
+                            <td class="p-4 "><?= $data['id_siswa'] ?> </td>
+                            <td class="p-4 "><?= $data['tanggal'] ?> </td>
+                            <td class="p-4 "><?= $data['matpel'] ?></td>
+                            <td class="p-4 "><?= $data['materi'] ?></td>
+                            <td class="p-4 "><?= $data['penilaian'] ?></td>
+                            <td class="p-4"><a href="deleteNilai.php?id=<?php echo $data['id'] ?>" class="p-2  text-white  bg-red-400 hover:bg-red-300 rounded-xl">Delete</a></td>
                         </tr>
                         <?php } ?>
                     

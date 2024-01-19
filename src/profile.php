@@ -11,7 +11,7 @@
   <link href="output.css" rel="stylesheet">
 </head>
 <body class="bg-[#DFEBFB] h-screen flex ">
-    <header class="bg-[#5651AB] w-[344px] rounded-r-3xl flex flex-col justify-between items-start ">
+    <header class="bg-[#5651AB] w-[344px] rounded-r-3xl h-screen flex flex-col justify-between items-start ">
       <nav class="">
           <ul class="text-[#A4B3C7] text-2xl">
                 <li class="m-10 mt-16 flex gap-3 active:text-white hover:text-white items-center">

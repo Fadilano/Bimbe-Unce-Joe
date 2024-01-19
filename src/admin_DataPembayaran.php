@@ -35,11 +35,11 @@
         <table class="table-auto mt-8 bg-white text-xl w-[840px] rounded-2xl  ">
             <thead>
                 <tr class="border border-b-violet-300" >
-                    <th class="p-2 text-left">Id Siswa</th>
-                    <th class="p-2 text-left">Bulan</th>
-                    <th class="p-2 text-left">Metode</th>
-                    <th class="p-2 text-left">tanggal</th>
-                    <th class="p-2 text-left">Status</th>
+                    <th class="p-4 text-left">Id Siswa</th>
+                    <th class="p-4 text-left">Bulan</th>
+                    <th class="p-4 text-left">Metode</th>
+                    <th class="p-4 text-left">tanggal</th>
+                    <th class="p-4 text-left">Status</th>
                     
                 </tr>
             </thead>
@@ -52,12 +52,12 @@
                     if($query){
                         while ($data=mysqli_fetch_array($query)){?>
                         <tr>
-                            <td class="p-2 "><?= $data['id_siswa'] ?> </td>
-                            <td class="p-2 "><?= $data['bulan'] ?> </td>
-                            <td class="p-2 "><?= $data['metode'] ?></td>
-                            <td class="p-2 "><?= $data['tanggal'] ?></td>
-                            <td class="p-2 "><?= $data['status'] ?></td>
-                            <td><a href="delete_pembayaran.php?id=<?php echo $data['id'] ?>" class="p-1 border border-2 text-white border-black bg-red-400 rounded-xl">Delete</a></td>
+                            <td class="p-4 "><?= $data['id_siswa'] ?> </td>
+                            <td class="p-4 "><?= $data['bulan'] ?> </td>
+                            <td class="p-4 "><?= $data['metode'] ?></td>
+                            <td class="p-4 "><?= $data['tanggal'] ?></td>
+                            <td class="p-4 "><?= $data['status'] ?></td>
+                            <td><a href="delete_pembayaran.php?id=<?php echo $data['id'] ?>" class="p-2  text-white  bg-red-400 rounded-xl">Delete</a></td>
                         </tr>
                         <?php } ?>
                     

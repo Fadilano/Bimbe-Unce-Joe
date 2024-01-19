@@ -12,8 +12,8 @@ session_start();
   <link href="output.css" rel="stylesheet">
 </head>
 <body class="bg-[#DFEBFB] h-screen flex ">
-    <header class="bg-[#5651AB] w-[344px] rounded-r-3xl flex flex-col justify-between items-start ">
-      <nav class="">
+<header class="bg-[#5651AB] w-[344px] rounded-r-3xl flex flex-col justify-between items-start ">
+      <nav class="w-[344px]">
           <ul class="text-[#A4B3C7] text-2xl">
                 <li class="m-10 mt-16 flex gap-3 active:text-white hover:text-white  items-center">
                     <svg class=" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24"><path fill="currentColor" d="m21.743 12.331l-9-10c-.379-.422-1.107-.422-1.486 0l-9 10a.998.998 0 0 0-.17 1.076c.16.361.518.593.913.593h2v7a1 1 0 0 0 1 1h3a1 1 0 0 0 1-1v-4h4v4a1 1 0 0 0 1 1h3a1 1 0 0 0 1-1v-7h2a.998.998 0 0 0 .743-1.669"/></svg>
@@ -29,7 +29,7 @@ session_start();
             <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24"><path fill="currentColor" d="M5 21q-.825 0-1.412-.587T3 19V5q0-.825.588-1.412T5 3h7v2H5v14h7v2zm11-4l-1.375-1.45l2.55-2.55H9v-2h8.175l-2.55-2.55L16 7l5 5z"/></svg>
             <a href="logout.php">Keluar</a>
         </div>
-    </header>
+</header>
     <main class="p-16 w-[841px]">
         <h1 class="mb-4 text-5xl font-bold text-[#150D5C]">Data Siswa</h1>
         <a href="admin_formtTambah.php" class="font-semibold p-2 bg-green-500 text-white rounded-lg" >Tambah Data</a>
@@ -52,15 +52,15 @@ session_start();
             <tbody class="whitespace-nowrap">
                 <!-- ISI DATA -->
                 <tr>
-                    <td class="p-2 "><?= $data['id_siswa'] ?></td>
-                    <td class="p-2 "><?= $data['nama'] ?></td>
-                    <td class="p-2 "><?= $data['kelas'] ?></td>
-                    <td class="p-2 "><?= $data['sekolah'] ?></td>
-                    <td class="p-2 "><?= $data['alamat'] ?></td>
-                    <td class="p-2 "><?= $data['telepon'] ?></td>
-                    <td><a href="admin_DataPenilaian.php?id_siswa=<?php echo $data['id_siswa']?>" class="p-1 border border-black rounded-lg">Laporan_Penilaian</a></td>
-                    <td><a href="admin_DataPembayaran.php?id_siswa=<?php echo $data['id_siswa']?>" class="p-1 border border-black rounded-lg">Status Pembayaran</a></td>
-                    <td><a href="deleteSiswa.php?id_siswa=<?php echo $data['id_siswa'] ?>" class="p-1 border border-2 text-white border-black bg-red-400 ">Delete</a></td>
+                    <td class="p-4 "><?= $data['id_siswa'] ?></td>
+                    <td class="p-4 "><?= $data['nama'] ?></td>
+                    <td class="p-4 "><?= $data['kelas'] ?></td>
+                    <td class="p-4 "><?= $data['sekolah'] ?></td>
+                    <td class="p-4 "><?= $data['alamat'] ?></td>
+                    <td class="p-4 "><?= $data['telepon'] ?></td>
+                    <td class="p-4"><a href="admin_DataPenilaian.php?id_siswa=<?php echo $data['id_siswa']?>" class="p-1 border border-black rounded-lg">Laporan_Penilaian</a></td>
+                    <td class="p-4"><a href="admin_DataPembayaran.php?id_siswa=<?php echo $data['id_siswa']?>" class="p-1 border border-black rounded-lg">Status Pembayaran</a></td>
+                    <td class="p-4"><a href="deleteSiswa.php?id_siswa=<?php echo $data['id_siswa'] ?>" class="p-2  text-white  bg-red-400 rounded-lg ">Delete</a></td>
                     
                 </tr>
                 <?php } ?>
