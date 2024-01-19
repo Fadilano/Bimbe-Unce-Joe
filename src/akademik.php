@@ -32,7 +32,7 @@
         <table class="table-auto bg-white text-xl w-[840px] rounded-2xl  ">
             <thead>
                 <tr class="border border-b-violet-300" >
-                    <th class="p-2 text-left">NPM</th>
+                    <th class="p-2 text-left">Id_Siswa</th>
                     <th class="p-2 text-left">Tanggal</th>
                     <th class="p-2 text-left">Mata Pelajaran</th>
                     <th class="p-2 text-left">Materi</th>
