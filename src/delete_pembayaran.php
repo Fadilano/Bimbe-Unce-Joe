@@ -5,7 +5,7 @@ if(isset($_GET['id'])){
     
 echo "<script>
     alert('pembayaran siswa berhasil di hapus');
-    document.location.href = 'admin_DataPembayaran.php';
+    document.location.href = 'admin_dataSiswa.php';
 
 
 

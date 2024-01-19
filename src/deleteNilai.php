@@ -5,7 +5,7 @@ if(isset($_GET['id'])){
     
 echo "<script>
     alert('data nilai siswa berhasil di hapus');
-    document.location.href = 'admin_DataPenilaian.php';
+    document.location.href = 'admin_dataSiswa.php';
 
 
 
